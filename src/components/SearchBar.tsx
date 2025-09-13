@@ -1,11 +1,11 @@
-import { Input } from '@/components/ui/input';
-import { useStore } from '@/store/useStore';
-import { Search, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Input } from "@/components/ui/input";
+import { useStore } from "@/store/useStore";
+import { Search, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function SearchBar() {
   const { searchQuery, setSearchQuery } = useStore();
-  
+
   return (
     <div className="relative animate-slide-in">
       <div className="relative">
@@ -20,7 +20,7 @@ export function SearchBar() {
           <Button
             variant="ghost"
             size="sm"
-            onClick={() => setSearchQuery('')}
+            onClick={() => setSearchQuery("")}
             className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 h-6 w-6 sm:h-8 sm:w-8 p-0 hover:bg-gray-100 button-hover"
           >
             <X className="w-3 h-3 sm:w-4 sm:h-4" />

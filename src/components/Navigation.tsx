@@ -1,7 +1,7 @@
 import { useStore } from "@/store/useStore";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Search, Palette, BarChart3 } from "lucide-react";
+import { Calendar, Search } from "lucide-react";
 
 export function Navigation() {
   const { currentView, setCurrentView, schedule, activities } = useStore();
@@ -25,25 +25,18 @@ export function Navigation() {
   ];
 
   return (
-    <nav className="glass-effect border-b border-white/20 shadow-lg sticky top-0 z-50 animate-fade-in">
+    <nav className="glass-effect border-b border-white/20 shadow-lg sticky top-0 z-50 animate-fade-in w-[95%] md:w-[95%] lg:w-[85%] mx-auto">
       <div className="container-responsive">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          {/* Logo */}
           <div className="flex items-center space-x-3 animate-slide-in">
-            <div className="p-2 sm:p-3 gradient-primary rounded-xl text-white shadow-lg button-hover">
-              <Calendar className="w-5 h-5 sm:w-6 sm:h-6" />
-            </div>
-            <div>
-              <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
-                Atlanend
-              </h1>
-              <p className="text-xs text-gray-500 hidden sm:block">
-                Plan your perfect weekend
-              </p>
-            </div>
+            <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+              Atlanend
+            </h1>
+            <p className="text-xs text-gray-500 hidden sm:block">
+              Plan your perfect weekend
+            </p>
           </div>
 
-          {/* Navigation */}
           <div className="flex items-center space-x-1 sm:space-x-2">
             {navItems.map((item) => {
               const Icon = item.icon;
