@@ -3,16 +3,9 @@ import { useStore } from '@/store/useStore';
 import { ScheduledActivity } from '@/types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { 
   Calendar, 
   Clock, 
-  Trash2, 
-  Edit3, 
-  GripVertical,
   Sun,
   Moon,
   Coffee,
@@ -28,8 +21,6 @@ import {
   useSensors,
   DragEndEvent,
 } from '@dnd-kit/core';
-import {
-  arrayMove,
   SortableContext,
   sortableKeyboardCoordinates,
   verticalListSortingStrategy,
@@ -51,19 +42,14 @@ interface ScheduledActivityCardProps {
   day: 'saturday' | 'sunday';
 }
 
-function ScheduledActivityCard({ activity, day }: ScheduledActivityCardProps) {
-  const { removeActivityFromSchedule, updateScheduledActivity } = useStore();
-  const [isEditing, setIsEditing] = useState(false);
-  const [editData, setEditData] = useState({
-    scheduledTime: activity.scheduledTime || '',
-    notes: activity.notes || '',
-  });
+  // ...existing code...
+  // ...existing code...
+  // ...existing code...
 
-  const {
-    attributes,
-    listeners,
-    setNodeRef,
-    transform,
+  import {
+    SortableContext,
+    verticalListSortingStrategy,
+  } from '@dnd-kit/sortable';
     transition,
     isDragging,
   } = useSortable({ id: activity.id });
