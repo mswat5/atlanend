@@ -49,7 +49,7 @@ export function Navigation() {
                   onClick={() => setCurrentView(item.key)}
                   className={`relative flex items-center space-x-2 button-hover ${
                     isActive
-                      ? "gradient-primary text-white shadow-lg"
+                      ? "gradient-secondary text-white shadow-lg"
                       : "hover:bg-white/50"
                   }`}
                 >
